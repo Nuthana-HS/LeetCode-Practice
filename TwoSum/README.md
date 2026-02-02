@@ -35,4 +35,3 @@ Instead of checking every pair (which takes more time), we use a **HashMap**.
 
 This avoids nested loops and makes the solution faster.
 
-## ⚙️ Algorithm
