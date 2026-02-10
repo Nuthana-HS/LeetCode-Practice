@@ -9,8 +9,7 @@ public class ValidParentheses {
 
             if (c == '(' || c == '{' || c == '[') {
                 stack.push(c);
-            } 
-            else {
+            } else {
                 if (stack.isEmpty()) return false;
 
                 char top = stack.pop();
@@ -23,11 +22,4 @@ public class ValidParentheses {
 
         return stack.isEmpty();
     }
-
-    // For testing
-    public static void main(String[] args) {
-        System.out.println(isValid("()[]{}")); // true
-        System.out.println(isValid("(]"));     // false
-    }
 }
-
