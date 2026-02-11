@@ -1,91 +1,108 @@
-LeetCode 21 — Merge Two Sorted Lists
-🧠 What is the problem asking?
+🧩 LeetCode 21 — Merge Two Sorted Lists
 
-You are given two linked lists.
-Both are already sorted in ascending order.
+Platform: LeetCode
+Topic: Linked List, Two Pointers
 
-Your task is to combine them into one single sorted linked list.
+🔷 Problem Statement
 
-You are not creating a new list from scratch.
-You are rearranging the existing nodes.
+You are given the heads of two sorted linked lists:
 
-📌 Example
-List 1: 1 → 2 → 4
-List 2: 1 → 3 → 4
+list1
 
+list2
 
-After merging:
+Both lists are sorted in ascending order.
 
+Your task is to merge these two lists into one single sorted linked list and return the head of the merged list.
+
+🔷 Example
+List1: 1 → 2 → 4
+List2: 1 → 3 → 4
+
+Merged Output:
 1 → 1 → 2 → 3 → 4 → 4
 
-❓ Why is this problem important?
+🔷 Why This Problem Is Important
 
-This problem checks whether you understand:
+This problem helps you understand:
 
 How Linked Lists work
 
-How to move pointers correctly
+How to compare nodes using pointers
 
-How to compare two data sources at the same time
+How to merge sorted data
 
-How to maintain sorted order while merging
+How to manipulate node connections without creating extra lists
 
-This is a very common interview pattern.
+This is a very common interview question.
 
-💡 Core Idea in Simple Words
+🔷 Core Idea (Intuition)
 
 Since both lists are already sorted:
 
-Always pick the smaller value from the two lists.
+Compare the first nodes of both lists
 
-Then move forward in that list.
+Choose the smaller node
 
-Keep doing this until one list becomes empty.
+Move that list forward
 
-Finally, attach the remaining part of the other list.
+Repeat until one list becomes empty
 
-🪜 Step-by-Step Thinking
+Attach the remaining nodes of the other list
 
-Create a dummy node (just to help start the list).
+We are not creating new nodes.
+We are just changing the links.
 
-Keep a pointer called current to build the merged list.
+🔷 Step-by-Step Approach
 
-Compare first nodes of both lists:
+Create a dummy node to start the merged list.
 
-Smaller one goes next in merged list.
+Use a pointer current to build the merged list.
 
-Move the pointer in the list from which you picked the node.
+Compare values of list1 and list2.
 
-Move current forward.
+Attach the smaller node to current.next.
 
-Repeat until one list ends.
+Move the pointer of that list forward.
 
-Attach the remaining nodes of the other list.
+Continue this until one list ends.
 
-🔍 Dry Run
-list1	list2	Picked	Result So Far
+Attach the remaining part of the other list.
+
+Return dummy.next.
+
+🔷 Dry Run Explanation
+list1	list2	Selected	Merged List
 1	1	1	1
 2	1	1	1 → 1
 2	3	2	1 → 1 → 2
 4	3	3	1 → 1 → 2 → 3
 4	4	4	1 → 1 → 2 → 3 → 4
 null	4	4	1 → 1 → 2 → 3 → 4 → 4
-🧩 Trick Used (Very Important)
+🔷 Concepts Used
 
-We use a dummy node so we don’t have to worry about the head of the list while building it.
+Linked List traversal
 
-At the end, we return dummy.next.
+Two pointer technique
 
-⏱️ Complexity
+Dummy node method
 
-Time: O(n + m)
+Pointer manipulation
 
-Space: O(1)
+🔷 Time and Space Complexity
 
-✅ What I learned from this problem
+Time Complexity: O(n + m)
 
-How to merge data while keeping order
+Space Complexity: O(1)
 
-How to use pointers carefully in Linked Lists
+🔷 Learning Outcome
 
-Why dummy nodes make Linked List problems easier
+After solving this problem, you will clearly understand:
+
+How to merge two sorted linked lists
+
+How pointers work in linked lists
+
+How to avoid creating extra memory
+
+How to handle linked list problems in interviews
