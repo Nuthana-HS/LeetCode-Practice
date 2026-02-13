@@ -1,9 +1,9 @@
-🧩 LeetCode 21 — Merge Two Sorted Lists
+## 🧩 LeetCode 21 — Merge Two Sorted Lists
 
 Platform: LeetCode
 Topic: Linked List, Two Pointers
 
-🔷 Problem Statement
+## 🔷 Problem Statement
 
 You are given the heads of two sorted linked lists:
 
@@ -22,7 +22,7 @@ List2: 1 → 3 → 4
 Merged Output:
 1 → 1 → 2 → 3 → 4 → 4
 
-🔷 Why This Problem Is Important
+## 🔷 Why This Problem Is Important
 
 This problem helps you understand:
 
@@ -36,7 +36,7 @@ How to manipulate node connections without creating extra lists
 
 This is a very common interview question.
 
-🔷 Core Idea (Intuition)
+## 🔷 Core Idea (Intuition)
 
 Since both lists are already sorted:
 
@@ -53,7 +53,7 @@ Attach the remaining nodes of the other list
 We are not creating new nodes.
 We are just changing the links.
 
-🔷 Step-by-Step Approach
+## 🔷 Step-by-Step Approach
 
 Create a dummy node to start the merged list.
 
@@ -71,7 +71,7 @@ Attach the remaining part of the other list.
 
 Return dummy.next.
 
-🔷 Dry Run Explanation
+## 🔷 Dry Run Explanation
 list1	list2	Selected	Merged List
 1	1	1	1
 2	1	1	1 → 1
@@ -79,7 +79,7 @@ list1	list2	Selected	Merged List
 4	3	3	1 → 1 → 2 → 3
 4	4	4	1 → 1 → 2 → 3 → 4
 null	4	4	1 → 1 → 2 → 3 → 4 → 4
-🔷 Concepts Used
+## 🔷 Concepts Used
 
 Linked List traversal
 
@@ -89,13 +89,13 @@ Dummy node method
 
 Pointer manipulation
 
-🔷 Time and Space Complexity
+## 🔷 Time and Space Complexity
 
 Time Complexity: O(n + m)
 
 Space Complexity: O(1)
 
-🔷 Learning Outcome
+## 🔷 Learning Outcome
 
 After solving this problem, you will clearly understand:
 
